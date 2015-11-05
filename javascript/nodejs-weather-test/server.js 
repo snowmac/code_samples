@@ -1,0 +1,40 @@
+var http = require('http');
+var config = require('./config');
+var requestor = require('./request');
+
+var templates = require('./templates/template_framework')
+
+var htmlType = {'Content-Type': 'text/html'}; 
+var plainTextType = {'Content-Type': 'text/plain'}; 
+
+var searchHistory = []; 
+
+var respondToRequest = function(status, type, text, response) {
+	response.writeHead(status, type);
+	response.end(text);
+}
+
+http.createServer(function (request, response) {
+	var req = new requestor(); 
+	url = request.url.split("/"); 
+
+	if(url[1] == "location") {
+		if(typeof url[2] !== 'undefined') {
+			req.makeRequest("get", ("weather?q=" + url[2]));
+			searchHistory.push({url: url[2]});	
+		}	else {
+		  respondToRequest(200,htmlType,templates.index,response); 
+		}
+	} else {
+		  respondToRequest(200,plainTextType,"Hello World! \n",response); 
+	}
+
+	req.on("request", function(data){
+	  respondToRequest(200,htmlType,templates.weatherListing(JSON.parse(data),searchHistory),response); 
+	}); 
+
+
+}).listen(8124);
+
+console.log('Server running at http://127.0.0.1:8124/');
+
