@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- HTML 5 --> 
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="js/number_cruncher.js"></script>
+
+        <script type="text/javascript">
+        // using jQuery for some magic and selector goodness 
+        $(function(){
+            $("input").on("keyup",function(){
+                var value = $(this).val(); 
+                var instance = new number_cruncher(value);
+                $("#result").html(instance.get_string()); 
+            });
+        })
+        </script>
+    </head> 
+    <body>
+        <p> Welcome to the site, please enter a number without the dollar sign </p>
+
+        <input type="text" placeholder="Enter a number">
+
+        <p id="result"> The result will appear here</p>
+
+    </body> 
+</html> 
