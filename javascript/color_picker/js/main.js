@@ -14,6 +14,7 @@ $(document).ready(function() {
 
         renderIndividuals(); 
         renderAll(); 
+        renderString();
     });
 
     var renderIndividuals = function(){
@@ -28,5 +29,9 @@ $(document).ready(function() {
             settings["green"] + "," + 
             settings["blue"]
         + ")");
+    };
+
+    var renderString = function(){
+        $("#rgbString p").html("rgb(" + settings["red"] + ", " + settings["green"] + ", " + settings["blue"] + ")")
     };
 });
