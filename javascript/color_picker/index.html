@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adam Bourg's color picker</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <section>
+        This is an example of a RGB color picker by Adam Bourg. <hr/>     
+    </section>
+
+    <section id="colorPickerArea">
+        <label for="red">Red</label>
+        <input type="range" name="red" min="0" max="255">
+
+        <label for="green">Green</label>
+        <input type="range" name="green" min="0" max="255">
+
+        <label for="blue">Blue</label>
+        <input type="range" name="blue" min="0" max="255">
+    </section>
+
+    <section id="colorPreviews">
+        <h2> Color Previews: </h2>
+        <div id="red"> Red </div>
+        <div id="green"> Green </div>
+        <div id="blue"> Blue </div>
+    </section>
+
+
+    <section id="colorArea">
+        <h2> Combined Colors: </h2>
+        <div id="colorBox"> </div>
+    </section>
+
+</body>
+
+</html>
