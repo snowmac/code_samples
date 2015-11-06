@@ -1,0 +1,11 @@
+.yes, .no{
+    font-weight: bold;
+}
+
+.yes{
+    color: green;
+}
+
+.no {
+    color: red;
+}

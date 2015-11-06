@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morse decoder</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/for.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/recurse.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <p>Problem: Write a series of functions to take a phrase and return it's morse code equal. Use the minus sign for dash '-' and the period for dot '.'. For the sake of time, only handle A, B, C, D, E and space. </p>
+
+    <p>
+    Codes: 
+    <ul>
+        <li>A: .-</li>
+        <li>B: -...</li>
+        <li>C: -.-.</li>
+        <li>D: -..</li>
+        <li>E: .</li>
+        <li>space [ ]: /</li>
+    </ul>
+    </p>
+
+    <hr />
+
+    <p> Test case 1:  </p>
+
+        <ul>
+            <li> Input:  bad dad </li>
+            <li> Expected output: -... .- -.. / -.. .- -.. </li>
+        </ul>
+
+        <ul> Does .... pass? 
+
+            <li> For loop solution: <span id="forloop1"> </span></li>
+            <li> Map solution: <span id="map1"> </span></li>
+            <li> Recrusive solution: <span id="recrusive1"> </span></li>
+        </ul>
+        
+    <hr /> 
+    <p> Test case 2:  </p>
+
+        <ul>
+            <li> Input:  deed </li>
+            <li> Expected output: -.. . . -.. </li>
+        </ul>
+
+        <ul> Does .... pass? 
+
+            <li> For loop solution: <span id="forloop2"> </span></li>
+            <li> Map solution: <span id="map2"> </span></li>
+            <li> Recrusive solution: <span id="recrusive2"> </span></li>
+        </ul>
+
+    <hr /> 
+
+
+</body>
+
+</html>
