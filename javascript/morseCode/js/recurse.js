@@ -16,17 +16,13 @@ function morseRecursive(input) {
 }
 
 function morseRecurse(input,i){
-    var value = morseMap[input.charAt(i).toUpperCase()]; 
-    if(typeof(value)!=='undefined'){
-        if(i>0){
-           recursiveStringReturn += " ";
-        }
-        recursiveStringReturn += value;
-    }
-    
     if(i<input.length){
+       if(i>0){
+          recursiveStringReturn += " ";
+       }
+       recursiveStringReturn += morseMap[input.charAt(i).toUpperCase()];
        i = i+1;
-        morseRecurse(input,i);
+       morseRecurse(input,i);
     } else {
         return;
     } 
