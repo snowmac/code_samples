@@ -1,0 +1,27 @@
+{
+  // store this file at: /Users/{user}/Library/Application Support/Sublime Text 3/Packages
+
+  // I like the default ones
+	"color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
+  
+  // i need a big font
+	"font_size": 17,
+  
+  // mostly for ruby projects 
+	"translate_tabs_to_spaces": true,
+
+  // beautify ruby stuff 
+  "run_on_save": true,
+  "save_on_beautify": true,
+
+  // mostly for deal w/ ruby 
+  "tab_size": 2,
+
+  // OS X only: When files are opened from finder, or by dragging onto the
+  // dock icon, this controls if a new window is created or not.
+  "open_files_in_new_window": false,
+
+  // Makes tabs with modified files more visible
+  "highlight_modified_tabs": true,  
+
+}
