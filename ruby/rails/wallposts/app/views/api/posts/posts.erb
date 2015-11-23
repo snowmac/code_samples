@@ -1,0 +1,18 @@
+<% @comments.each do |comment| %>
+
+  <div class="post row">
+    <p> Name: <br /> 
+      <%= comment.try(:user).try(:name) %> 
+    </p>
+    <p> Email: <br /> 
+      <%= comment.try(:user).try(:email) %> 
+    </p>
+    <p> Comment: <br /> 
+      <%= comment.comment %> 
+    </p>
+    <p> Date posted:
+      <strong><%= comment.created_at %></strong>
+    </p>
+  </div>
+
+<% end %>

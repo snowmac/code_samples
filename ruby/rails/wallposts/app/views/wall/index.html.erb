@@ -1,0 +1,43 @@
+<h1> Welcome to our fancy new wall site!</h1>
+
+<fieldset>
+  <legend>Add a post to the wall</legend>
+  <form name="post" novalidate> 
+    <label for="name">Name</label>
+    <input type="text" name="name" data-ng-model="name" required />
+    <span ng-show="post.name.$error.required" class="error">Name is required.</span>
+
+    <label for="email">Email</label>    
+    <input type="text" name="email" data-ng-model="email" />
+    <span ng-show="post.email.$error.email" class="error">Invalid email address.</span>
+
+
+    <label for="comment">Comment</label>    
+    <textarea name="comment" data-ng-model="comment" required></textarea>
+    <span ng-show="post.comment.$error.required" class="error">Comment is required.</span>
+
+
+    <button id="submit_wall_post" data-ng-click="addComment()"> Add comment </button>
+  </form>
+</fieldset>
+
+<hr />
+  <p>There are {{ postsArray.length }} posts</p>
+<hr /> 
+
+<div id="postArea">
+  <div class="row" data-ng-show="postsArray.length == 0">
+    <p> We're sorry but there are no posts to show </p>
+  </div>
+  <div class="row" data-ng-repeat="item in postsArray" data-ng-show="postsArray.length > 0">
+    <section class="post">
+      
+      <p><img src="http://www.gravatar.com/avatar/{{ item.user.gravatar }}?s=50" data-ng-show="item.user.gravatar.length > 0" />
+
+        {{ item.user.name }} -- {{ item.user.email }} -- on: {{ item.created_at | date:'yyyy-MM-dd HH:mm' }}
+      </p>
+              {{ item.comment }} 
+
+    </section>
+  </div>
+</div> 
