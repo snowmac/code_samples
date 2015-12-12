@@ -18,6 +18,8 @@ http.createServer(function (request, response) {
 	var req = new requestor(); 
 	url = request.url.split("/"); 
 
+	// url looks like: localhost:8124/location/city name, ex Denver or Boston,MA
+
 	if(url[1] == "location") {
 		if(typeof url[2] !== 'undefined') {
 			req.makeRequest("get", ("weather?q=" + url[2]));
