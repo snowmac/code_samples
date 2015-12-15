@@ -1,0 +1,26 @@
+Device Recognition
+
+Goal
+
+Create “proof-of-concept” recognition software that passes as many of the following tests as possible. The more tests passed in your submission, the higher your score will be.
+
+Tests
+A.  Assign an ID to a browser
+B.  After the browser is closed and restarted, the browser is still assigned the same ID 
+C.  After the browser is set to block all cookies, the browser is still assigned the same ID
+
+Scoring
+
+Test  Points for passed test case
+A 1 point
+B 1 point
+C 3 points
+
+Bonus Requirement to achieve bonus
+( scored points ) * 1 Your solution uses only client-side logic (pure js on the front-end)
+( scored points ) * 1.5 Your solution uses only client-side logic and server-side logic
+( scored points ) * 2 Your solution uses only server-side logic
+
+Client-side recommendations: Vanilla JavaScript
+
+Server-side recommendations: Node.js

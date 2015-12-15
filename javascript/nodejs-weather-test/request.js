@@ -20,7 +20,11 @@ var requestor = function(){
 			res.on('data', function(d) {
 					data = d.toString();
 					data["options"] = options;
-					console.log(data)
+
+					if(config.debug.print.enabled){
+						console.log(data); 
+					}
+
 					self.emit("request", data);
 			});
 		});

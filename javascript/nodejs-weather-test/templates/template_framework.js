@@ -1,3 +1,5 @@
+var config = require('../config');
+
 var index = function(){
 	return "foo bar";
 }
@@ -10,7 +12,11 @@ var weatherListing = function(data, history) {
 			csv += ", ";
 		} 
 	}
-	console.log(history)
+	
+	if(config.debug.print.enabled){
+		console.log(history); 
+	}
+
 	csv += "<br/>"; 
 
 	start = "<ul>";
