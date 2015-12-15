@@ -14,6 +14,21 @@ var respondToRequest = function(status, type, text, response) {
 	response.end(text);
 }
 
+// Prevents duplicates in our search history
+var recordHistory = function(url){
+	var found = false
+	for(var i = 0; i < searchHistory.length; i++){
+		if(searchHistory[i]["url"] == url["url"]){
+			found = true; 
+			break; 
+		}
+	}
+
+	if(!found){
+		searchHistory.push(url); 
+	}
+}
+
 http.createServer(function (request, response) {
 	var req = new requestor(); 
 	url = request.url.split("/"); 
@@ -23,7 +38,9 @@ http.createServer(function (request, response) {
 	if(url[1] == "location") {
 		if(typeof url[2] !== 'undefined') {
 			req.makeRequest("get", ("weather?q=" + url[2]));
-			searchHistory.push({url: url[2]});	
+
+			recordHistory({"url": url[2]});	
+
 		}	else {
 		  respondToRequest(200,htmlType,templates.index,response); 
 		}
