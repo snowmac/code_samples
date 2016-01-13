@@ -1,0 +1,7 @@
+Beautify ruby
+BracketHighlighter
+CursorRuler
+Git
+GitGutter
+SideBarEnhancements
+SyncedSideBar
