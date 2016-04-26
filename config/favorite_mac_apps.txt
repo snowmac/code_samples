@@ -3,4 +3,6 @@ Productivity
 	Code Editor: https://www.sublimetext.com
 	Terminal Replacement: https://www.iterm2.com/
 	Shell Plugin: https://github.com/robbyrussell/oh-my-zsh
-	
+
+Command Line Tools
+	git pairing scripts: https://github.com/pivotal/git_scripts
