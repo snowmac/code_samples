@@ -1,0 +1,6 @@
+Productivity
+	Window Management: https://github.com/fikovnik/ShiftIt 
+	Code Editor: https://www.sublimetext.com
+	Terminal Replacement: https://www.iterm2.com/
+	Shell Plugin: https://github.com/robbyrussell/oh-my-zsh
+	
