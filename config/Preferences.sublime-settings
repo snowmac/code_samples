@@ -39,7 +39,7 @@
   "bold_folder_labels": true,
   "caret_style": "phase",
   "close_windows_when_empty": true,
-  "color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
+  "color_scheme": "Packages/Color Scheme - Default/LAZY.tmTheme",
   "copy_with_empty_selection": true,
   "create_window_at_startup": true,
   "default_encoding": "UTF-8",
@@ -99,7 +99,7 @@
     "log",
     "bin"
   ],
-  "font_size": 17,
+  "font_size": 14,
   "gpu_window_buffer": "auto",
   "highlight_line": true,
   "highlight_modified_tabs": true,
